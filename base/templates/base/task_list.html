@@ -1,3 +1,4 @@
+<a href="{% url 'task-create' %}">Add task</a>
 <table>
     <thead>
       <tr>
@@ -9,6 +10,7 @@
       <tr>
         <td>{{task.title}}</td>
         <td><a href="{% url 'task' task.id %}">View</a></td>
+        <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
       </tr>
       {% empty %}
         <h3>No Tasks in List</h3>

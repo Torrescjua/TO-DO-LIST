@@ -1,21 +1,25 @@
-<a href="{% url 'task-create' %}">Add task</a>
+<a href="{% url 'task-create' %}">Add Task</a>
 <table>
     <thead>
-      <tr>
-        <th>tasks</th>
-      </tr>
+        <tr>
+            <th>Tasks</th>
+            <th>Actions</th>
+        </tr>
     </thead>
     <tbody>
     {% for task in tasks %}
-      <tr>
-        <td>{{task.title}}</td>
-        <td><a href="{% url 'task' task.id %}">View</a></td>
-        <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
-        <td><a href="{% url 'task-delete' task.id %}">Delete</a></td>
-      </tr>
-      {% empty %}
-        <h3>No Tasks in List</h3>
+        <tr>
+            <td>{{ task.title }}</td>
+            <td>
+                <a href="{% url 'task' task.id %}">View</a> |
+                <a href="{% url 'task-update' task.id %}">Edit</a> |
+                <a href="{% url 'task-delete' task.id %}">Delete</a>
+            </td>
+        </tr>
+    {% empty %}
+        <tr>
+            <td colspan="2"><h3>No Tasks in List</h3></td>
+        </tr>
     {% endfor %}
     </tbody>
-  </table>
-  
+</table>

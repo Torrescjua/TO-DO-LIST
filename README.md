@@ -20,7 +20,7 @@ This is a Django-based task management application that allows users to create, 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/TO-DO-LIST.git
+    git clone https://github.com/Torrescjua/TO-DO-LIST.git
     cd ToDoList
     ```
 

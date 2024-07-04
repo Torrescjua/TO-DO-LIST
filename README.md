@@ -1,4 +1,4 @@
-# Django Task Management Application
+# Django Task Management Application - TODOLIST
 
 This is a Django-based task management application that allows users to create, update, delete, and search tasks. Users must be authenticated to manage their tasks.
 
@@ -74,7 +74,7 @@ This is a Django-based task management application that allows users to create, 
 
 ### Instant Search
 
-- Use the search bar at the top of the task list to filter tasks by their title instantly.
+- Use the search bar at the top of the task list to filter tasks by their title.
 
 ## Project Structure
 
@@ -90,12 +90,15 @@ task-management-app/
 │   │   └── base/
 │   │       ├── login.html
 │   │       ├── register.html
-│   │       └── tasks.html
+|   |       ├── task_confirm_delete.html
+|   |       ├── task_form.html
+|   |       ├── task_list.html
+│   │       └── task.html
 │   ├── urls.py
 │   ├── views.py
 │   └── ...
 │
-├── task_management_app/
+├── ToDoList/
 │   ├── __init__.py
 │   ├── settings.py
 │   ├── urls.py

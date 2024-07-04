@@ -1,0 +1,19 @@
+{
+    "workbench.colorTheme": "Sapphire (Dim)",
+    "window.zoomLevel": -1,
+    "prettier.tabWidth": 4,
+    "liveSassCompile.settings.watchOnLaunch": true,
+    "liveSassCompile.settings.showOutputWindowOn": "Error",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.wordWrap": "on",
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "material-icon-theme.files.associations": {
+        "*.html": "html"
+    } 
+}

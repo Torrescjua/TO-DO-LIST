@@ -20,8 +20,8 @@ This is a Django-based task management application that allows users to create, 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/task-management-app.git
-    cd task-management-app
+    git clone https://github.com/yourusername/TO-DO-LIST.git
+    cd ToDoList
     ```
 
 2. Create and activate a virtual environment:

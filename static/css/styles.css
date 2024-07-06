@@ -1,3 +1,130 @@
+/* fonts.css */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 body{
-    background-color : black;
+    background-color: #FAFAFAFA;
+    padding-top: 30px;
+    font-family: 'Nunito', sans-serif;
 }
+
+.container{
+    max-width: 550px;
+    max-height: 550px;
+    margin: auto;
+    background-color: #fff;
+    -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    border-radius: 20%;
+}
+
+.header-bar {
+    text-align: center;
+    padding: 10px 0px;       
+    border-bottom: 1px solid silver;
+    background: linear-gradient(90deg, #36B9D3 0%, #2592A7 43%, #2592A7 100%);
+    border-radius: 0 15%;
+    color: #FFFFFF;
+}
+
+/* Estilos para el contenedor del formulario */
+.form-container {
+    margin: 15px 30px;
+    padding: 20px;
+}
+
+/* Estilos para los elementos del formulario dentro del contenedor */
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-container p {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-container input[type="text"],
+.form-container textarea,
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #E1E5F2;
+}
+
+.form-container input[type="checkbox"]{
+    display: flow-root;
+}
+
+.form-container textarea {
+    height: 100px;
+}
+
+button[type="submit"] {
+    background-color: #A4CCF4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button[type="submit"]:hover {
+    background-color: #80B8EF; /* Fondo verde más oscuro al pasar */
+}
+
+a{
+    color: #E1E5F2;
+}
+
+.error-container{
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    color: #721c24;
+    font-size: small;
+}
+
+.return-tag {
+    padding: 0px 20px;
+}
+
+/* Estilos para el contenedor de tareas */
+
+.btn-out button[type="submit"]{
+    background-color: unset;
+    color: white;
+    text-decoration: underline; /* Agrega subrayado al texto */
+    text-underline-offset: initial; /* Ajusta el desplazamiento del subrayado si es necesario */
+    cursor: pointer;
+}
+
+.exce-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.exce-container p{
+    flex: 1;
+    text-align: center;
+    margin-left: 100px;
+    font-size: large;
+}
+
+
+
+
+

@@ -7,9 +7,10 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
+from django.contrib import messages
 
 from .models import Task
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 
 
 class CustomLoginView(LoginView):
@@ -41,6 +42,19 @@ class RegisterUser(FormView):
         if user is not None:
             login(self.request, user)
         return super().form_valid(form)
+    
+    def form_invalid(self, form):
+        """
+        If the form is invalid, display the form with errors.
+        """
+        error_messages = []
+        for _ , errors in form.errors.items():
+            for error in errors:
+                error_messages.append(f"{error}")       
+        
+        messages.error(self.request, "Please correct the errors below.")
+        
+        return self.render_to_response(self.get_context_data(form=form, error_messages=error_messages))
     
     def get(self, *args, **kwargs):
         """
@@ -92,7 +106,7 @@ class TaskCreate(LoginRequiredMixin, CreateView):
     View to handle creation of a new task.
     """
     model = Task
-    fields = ['title', 'description', 'done']
+    fields = ['title', 'description']
     success_url = reverse_lazy('tasks')
     
     def form_valid(self, form):

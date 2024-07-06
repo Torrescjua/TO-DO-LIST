@@ -1,13 +1,39 @@
 {% extends "base/index.html" %}
 
 {% block content %}
-    <h1>Register</h1>
+    <div class="header-bar">
+        <h1>Register</h1>
+    </div>
 
-    <form method="POST">
+    <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Register</button>
+        <div class="form-container">
+            <label>{{ form.username.label }}</label>
+            {{ form.username }}
+
+            <label>{{ form.password1.label }}</label>
+            {{ form.password1 }}
+
+            <label>{{ form.password2.label }}</label>
+            {{ form.password2 }}
+
+           
+            {% if error_messages %}
+                <div class="error-container">
+                    {% for message in error_messages %}
+                        <div class="alert alert-danger">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+           
+
+            <div align="center">
+                <button type="submit">Register</button>
+                <p>Already have an account? <a href="{% url 'login' %}">Sign In</a></p>
+            </div>
+        </div>
     </form>
 
-    <p>Already have an account? <a href="{% url 'login' %}">Sign In</a></p>
 {% endblock content %}

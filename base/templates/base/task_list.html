@@ -1,18 +1,23 @@
 {% extends "base/index.html" %}
 
 {% block content %}
-    {% if request.user.is_authenticated %}
-        <p>Welcome, {{ request.user.username }}</p>
-        <form action="{% url 'logout' %}" method="post">
-            {% csrf_token %}
-            <button type="submit">Sign Out</button>
-        </form>
-    {% else %}
-        <a href="{% url 'login' %}">Sign In</a>
-    {% endif %}
 
-    <hr>
-    <h1>To Do List</h1>
+    <div class="header-bar">
+        <div class="exce-container">
+            <p>Welcome, {{ request.user.username | title }}</p>
+            <div align="right" class="btn btn-out">
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Sign Out</button>
+                </form>
+            </div>
+        </div>
+        
+        <h3> You have {{ count }} incomplete task{{ count|pluralize:'s' }}</h3>
+        {% if request.user.is_authenticated %}
+    {% endif %}
+    </div>
+
     <a href="{% url 'task-create' %}">Add Task</a>
 
     <form method="GET" style="margin-top: 10px;">

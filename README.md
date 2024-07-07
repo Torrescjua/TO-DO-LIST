@@ -79,7 +79,7 @@ This is a Django-based task management application that allows users to create, 
 ## Project Structure
 
 ```plaintext
-task-management-app/
+ToDoList_Django/
 │
 ├── base/
 │   ├── __init__.py
@@ -104,6 +104,11 @@ task-management-app/
 │   ├── urls.py
 │   ├── wsgi.py
 │   └── ...
+├── static/
+|   ├── css/
+|   |   └── styles.css
+|   └── img/
+|       └── ...         
 │
 ├── manage.py
 ├── requirements.txt
